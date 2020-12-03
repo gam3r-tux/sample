@@ -51,7 +51,6 @@ namespace HLM
                 ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
             });
 
-            app.UseAuthentication();
             //-------------------------------
             if (env.IsDevelopment())
             {
@@ -66,7 +65,6 @@ namespace HLM
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-            app.UseCookiePolicy();
 
             app.UseMvc(routes =>
             {
